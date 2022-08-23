@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 //Program 
 
 app.get('/test',(req,res)=>{
-    let sql = ` SELECT * FROM Vessel `
+    let sql = ` SELECT * FROM NoonReP `
     connection.query(sql,(err,result, fields)=>{
         if(err)throw err
        console.log(result)

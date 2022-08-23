@@ -4,6 +4,9 @@ import { Component } from "react";
 import InputExampleInput from "./InputExampleinput";
 import GridExampleColumnWidth from './VesselInfo'
 import { Grid } from "semantic-ui-react";
+import Form from "./Form";
+import FormExampleWidthField from "./FormExampleWidthField";
+
 
 
 class Main extends Component{
@@ -13,7 +16,14 @@ class Main extends Component{
                
                <Header/>
                <div class="ui action input"><input type="text" placeholder="Vessel name..."/><button class="ui button">Search</button></div>
-                <GridExampleColumnWidth/>
+               
+               
+                
+                {/* <GridExampleColumnWidth/> */}
+                <Form/>
+                <FormExampleWidthField/>
+
+                
             </div>
             
         )
