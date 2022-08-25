@@ -1,6 +1,8 @@
 import React from 'react'
 import { Header } from 'semantic-ui-react'
 import axios from 'axios'
+import './App.css';
+
 
 axios.get('http://localhost:4000/test')
   .then(function (res, data) {
@@ -11,8 +13,8 @@ axios.get('http://localhost:4000/test')
   },[])
 
 const HeaderExamplePage = () => (
-  <div>
-    <Header as='h1'>Sea-Swift Noon Report</Header>
+  <div className="wrapper">
+    <Header as='h1' >Sea-Swift Noon Report</Header>
     {/* <Header as='h2'>Second Header</Header>
     <Header as='h3'>Third Header</Header>
     <Header as='h4'>Fourth Header</Header>
