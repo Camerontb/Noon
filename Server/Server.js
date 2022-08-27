@@ -32,14 +32,17 @@ app.get('/test',(req,res)=>{
     const lastName= req.body.data.lastName
     
     // const ADD_QUERY =  `INSERT INTO Vessel (firstName, lastName) VALUES ('${firstName}','${lastName}')`;
-    // // const Recieve = `SELECT * from Dockit`;
-    // connection.query(ADD_QUERY,(err,res)=>{
-    // })
-    // connection.query(Recieve,(err,rows)=>{
-    //   if(err)console.log(err)
-    //   console.log(rows)
+    const ADD_QUERY =  `insert into Vessel (Name) VALUE ('Hello3')`;
+
+
+    // const Recieve = `SELECT * from Vessel`;
+    connection.query(ADD_QUERY,(err,res)=>{
+    })
+    connection.query(Recieve,(err,rows)=>{
+      if(err)console.log(err)
+      console.log(rows)
       
-    // })
+    })
     
     // res.send("file uploaded")
 })
