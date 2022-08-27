@@ -7,8 +7,8 @@ import './App.css';
 axios.get('http://localhost:4000/test')
   .then(function (res, data) {
     // handle success
-    console.log(res.data);
-    console.log(data.Name)
+    // console.log(res.data);
+    // console.log(data.Name)
     
   },[])
 
