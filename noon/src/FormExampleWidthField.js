@@ -7,6 +7,8 @@ import { useForm } from 'react-hook-form'
 
 
 function FormExampleWidthField(){
+    // const {buttonText} =this.state.false 
+    
     const {handleSubmit, register} =useForm()
     const onSubmit =(data) => {
         console.log(data)
@@ -16,12 +18,12 @@ function FormExampleWidthField(){
     
         })
         
-        
+         
     }
    
     return(
         
-        <Form className="wrapper" onSubmit={handleSubmit(onSubmit)} action="/stats"  method="post">
+        <Form className="wrapper" onSubmit={handleSubmit(onSubmit)} action="/stats"  method="post" >
             
            
             <Form.Group onSubmit={handleSubmit} >

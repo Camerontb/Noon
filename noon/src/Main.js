@@ -7,6 +7,8 @@ import './App.css';
 
 import FormExampleWidthField from "./FormExampleWidthField";
 import MenuExampleSecondary from "./Menu"
+import Footer from "./Footer";
+
 
 
 class Main extends Component{
@@ -15,7 +17,7 @@ class Main extends Component{
             <div>
                
                <Header/>
-               <MenuExampleSecondary/>
+               <MenuExampleSecondary />
 
                {/* <div className="wrapper" class="ui action input"><input type="text" placeholder="Vessel name..."/><button class="ui button">Search</button></div> */}
                
@@ -24,6 +26,7 @@ class Main extends Component{
                 {/* <GridExampleColumnWidth/> */}
                 {/* <Form/> */}
                 <FormExampleWidthField/>
+                <Footer/>
 
                 
             </div>

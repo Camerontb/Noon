@@ -12,17 +12,17 @@ export default class MenuExampleSecondary extends Component {
     return (
       <Menu secondary>
         <Menu.Item
-          name='home'
+          name='New Record'
           active={activeItem === 'home'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name='messages'
+          name='History'
           active={activeItem === 'messages'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name='friends'
+          name='Information'
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
         />
@@ -30,13 +30,10 @@ export default class MenuExampleSecondary extends Component {
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />
           </Menu.Item>
-          <Menu.Item
-            name='logout'
-            active={activeItem === 'logout'}
-            onClick={this.handleItemClick}
-          />
+         
         </Menu.Menu>
       </Menu>
+      
     )
   }
 }
