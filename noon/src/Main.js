@@ -26,7 +26,7 @@ class Main extends Component{
                 {/* <GridExampleColumnWidth/> */}
                 {/* <Form/> */}
                 <FormExampleWidthField/>
-                <Footer/>
+                <Footer classname = "wrapper"/>
 
                 
             </div>

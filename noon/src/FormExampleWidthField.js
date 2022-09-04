@@ -26,7 +26,7 @@ function FormExampleWidthField(){
         <Form className="wrapper" onSubmit={handleSubmit(onSubmit)} action="/stats"  method="post" >
             
            
-            <Form.Group onSubmit={handleSubmit} >
+            <Form.Group id= "details" onSubmit={handleSubmit} >
                
                 <Form.Field width={6}>
                     <label>Vessel Name</label>
@@ -53,15 +53,71 @@ function FormExampleWidthField(){
                     />
                 </Form.Field>
             </Form.Group>
-            <button type="submit" >Submit</button>
+            
+           
+            
+            
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+                    <th>Event</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Notice or Readiness</td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>On passage for ramp</td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>On ramp</td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>Start Cargo</td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>Complete Cargo</td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>Last Line (Depart Ramp)</td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>FAOP</td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="field">
+                <label>Notes and Comments</label>
+                <textarea></textarea>
+             </div>
+             
+    
 
             
             
-
+             <button class="ui blue button">Submit</button>
             
             
            
         </Form>
+           
     )
 
     

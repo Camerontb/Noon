@@ -11,11 +11,7 @@ import {
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "green", 
-                   textAlign: "center", 
-                   marginTop: "-50px" }}>
-        CMarine
-      </h1>
+     
       <Container>
         <Row>
           <Column>
