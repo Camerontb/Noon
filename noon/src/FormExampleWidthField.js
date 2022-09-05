@@ -67,45 +67,122 @@ function FormExampleWidthField(){
                 </thead>
                 <tbody>
                     <tr>
-                    <td>Notice or Readiness</td>
-                    <td></td>
-                    <td></td>
+                        <td>Notice or Readiness</td>
+                        <td>
+                            <input 
+                            type = "time"
+                            {...register('NorTime')}
+                            />
+                        </td>
+                        <td>
+                            <input 
+                            type = "date"
+                            placeholder='hello'
+                            {...register('norDate')} 
+                            />
+                        </td>
                     </tr>
                     <tr>
-                    <td>On passage for ramp</td>
-                    <td></td>
-                    <td></td>
+                        <td>On Port Passage</td>
+                        <td>
+                            <input 
+                            type = "time"
+                            {...register ('OnPortPassageTime')}
+                            />
+                        </td>
+                        <td>
+                            <input 
+                            type = "date"
+                            placeholder='hello'
+                            {...register('OnPortPassageDate')} 
+                            />
+                        </td>
                     </tr>
                     <tr>
-                    <td>On ramp</td>
-                    <td></td>
-                    <td></td>
+                        <td>Ramp Down</td>
+                        <td>
+                            <input 
+                            type = "time"
+                            {...register('RampDownTime')}
+                            />
+                        </td>
+                        <td>
+                            <input 
+                            type = "date"
+                            placeholder='hello'
+                            {...register('RampDownDate')} 
+                            />
+                        </td>
                     </tr>
                     <tr>
-                    <td>Start Cargo</td>
-                    <td></td>
-                    <td></td>
+                        <td>Start Cargo</td>
+                        <td>
+                            <input 
+                            type = "time"
+                            {...register("StartCargoTime")}
+                            />
+                        </td>
+                        <td>
+                            <input 
+                            type = "date"
+                            placeholder='hello'
+                            {...register('StartCargoDate')} 
+                            />
+                        </td>
                     </tr>
                     <tr>
-                    <td>Complete Cargo</td>
-                    <td></td>
-                    <td></td>
+                        <td>Complete Cargo</td>
+                        <td>
+                            <input 
+                            type = "time"
+                            {...register('CompleteCargoTime')} 
+                            />
+                        </td>
+                        <td>
+                            <input 
+                            type = "date"
+                            placeholder='hello'
+                            {...register('CompleteCargoDate')} 
+                            />
+                        </td>
                     </tr>
                     <tr>
-                    <td>Last Line (Depart Ramp)</td>
-                    <td></td>
-                    <td></td>
+                        <td>Ramp up</td>
+                        <td>
+                            <input 
+                            type = "time"
+                            {...register('RampUpTime')}
+                            />
+                        </td>
+                        <td>
+                            <input 
+                            type = "date"
+                            placeholder='hello'
+                            {...register('RampUpDate')} 
+                            />
+                        </td>
                     </tr>
                     <tr>
-                    <td>FAOP</td>
-                    <td></td>
-                    <td></td>
+                        <td>'FAOP (Full away on passage)'</td>
+                        <td>
+                            <input 
+                            type = "time"
+                            {...register('FAOPTime')}
+                            />
+                        </td>
+                        <td>
+                            <input 
+                            type = "date"
+                            placeholder='hello'
+                            {...register('FAOPDate')} 
+                            />
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <div class="field">
                 <label>Notes and Comments</label>
-                <textarea></textarea>
+                <textarea {...register ('notes')}></textarea>
              </div>
              
     

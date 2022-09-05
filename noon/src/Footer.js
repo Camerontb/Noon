@@ -4,7 +4,6 @@ import {
   Container,
   Row,
   Column,
-  FooterLink,
   Heading,
 } from "./Style/FooterStyles";
   
@@ -15,15 +14,15 @@ const Footer = () => {
       <Container>
         <Row>
           <Column>
-            <Heading>About Us</Heading>
+            <Heading>Tidal Information</Heading>
             
           </Column>
           <Column>
-            <Heading>Services</Heading>
+            <Heading></Heading>
             
           </Column>
           <Column>
-            <Heading>Contact Us</Heading>
+            <Heading>Contact</Heading>
             
           </Column>
           
