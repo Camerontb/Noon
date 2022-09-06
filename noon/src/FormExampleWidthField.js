@@ -12,7 +12,7 @@ function FormExampleWidthField(){
     const {handleSubmit, register} =useForm()
     const onSubmit =(data) => {
         console.log(data)
-        alert(`You've lodged an expanse`)
+        // alert(`You've lodged an expanse`)
         axios.post('http://localhost:4000/noon',{
           data         
     
@@ -49,7 +49,7 @@ function FormExampleWidthField(){
                     <input
                         placeholder='Enter the date'
                         type="Date"
-                        {...register("Date")}
+                        {...register("opDate")}
                     />
                 </Form.Field>
             </Form.Group>
@@ -71,7 +71,7 @@ function FormExampleWidthField(){
                         <td>
                             <input 
                             type = "time"
-                            {...register('NorTime')}
+                            {...register('norTime')}
                             />
                         </td>
                         <td>
