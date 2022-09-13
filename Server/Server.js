@@ -12,16 +12,16 @@ app.use(bodyParser.json())
 
 //Program 
 
-// app.get('/test',(req,res)=>{
-//     let sql = ` SELECT * FROM NoonReP `
-//     connection.query(sql,(err,result, fields)=>{
-//         if(err)throw err
-//        console.log(result)
-//         res.send(result)
+app.get('/test',(req,res)=>{
+    let sql = ` SELECT * FROM NoonReP `
+    connection.query(sql,(err,result, fields)=>{
+        if(err)throw err
+       console.log(result)
+        res.send(result)
   
-//     })
+    })
   
-// })
+})
 
 
   app.post('/noon',  (req,res)=> {
@@ -51,17 +51,19 @@ app.use(bodyParser.json())
 
     
       const ADD_QUERY =  `INSERT INTO NoonRep (vesselName,Port,opDate,norTime,norDate,OnPortPassageTime,OnPortPassageDate,RampDownTime,RampDownDate,StartCargoTime,StartCargoDate,CompleteCargoTime,CompleteCargoDate,RampUpTime,RampUpDate,FAOPTime,FAOPDate,notes) VALUES ('${vesselName}','${Port}','${opDate}','${norTime}','${norDate}','${OnPortPassageTime}','${OnPortPassageDate}','${RampDownTime}','${RampDownDate}','${StartCargoTime}','${StartCargoDate}','${CompleteCargoTime}','${CompleteCargoDate}','${RampUpTime}','${RampUpDate}','${FAOPTime}','${FAOPDate}','${notes}')`;
-        // const Recieve = `SELECT * from Dockit`;
+        const recieve = `SELECT * from NoonRep`;
         connection.query(ADD_QUERY,(err,res)=>{
         })
-        // connection.query(recieve,(err,rows)=>{
-        //   if(err)console.log(err)
-        //   console.log(rows)
+        connection.query(recieve,(err,rows)=>{
+          if(err)console.log(err)
+          console.log(rows)
           
-        // })
+        })
         
         res.send("file uploaded")
     })
 app.listen(4000,()=>{
     console.log("Running on Port 4000")
 })
+
+// Issue that unless a date is in all the fields it doesxnt register 
