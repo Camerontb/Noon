@@ -16,6 +16,8 @@ class Main extends Component{
         return(
             <BrowserRouter>
                 <Routes>
+                {/* <Footer /> */}
+
                 
                 {/* <Header/> */}
                 {/* <MenuExampleSecondary /> */}
@@ -26,8 +28,9 @@ class Main extends Component{
                     
                     {/* <GridExampleColumnWidth/> */}
                     {/* <Form/> */}
+                    <Route path ='/Menu' element= {<MenuExampleSecondary/>}/>
+                   
                     <Route path ='/' element= {<FormExampleWidthField/>}/>
-                    {/* <Footer classname = "wrapper"/> */}
 
                 </Routes>   
             </BrowserRouter>   

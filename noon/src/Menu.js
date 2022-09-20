@@ -1,39 +1,38 @@
-import React, { Component } from 'react'
-import { Input, Menu } from 'semantic-ui-react'
+// import React, { Component } from 'react'
+// import { Input, Menu } from 'semantic-ui-react'
 
-export default class MenuExampleSecondary extends Component {
-  state = { activeItem: 'home' }
+// export default class MenuExampleSecondary extends Component {
+  
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  
 
-  render() {
-    const { activeItem } = this.state
+//   render() {
+    
 
-    return (
-      <Menu secondary>
-        <Menu.Item
-          name='New Record'
-          active={activeItem === 'home'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name='History'
-          active={activeItem === 'messages'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name='Information'
-          active={activeItem === 'friends'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Menu position='right'>
-          <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
-          </Menu.Item>
+//     return (
+//       <Menu secondary>
+//         <Menu.Item
+//           name='New Record'
+          
+          
+//         />
+//         <Menu.Item
+//           name='History'
+          
+          
+//         />
+//         <Menu.Item
+//           name='Information'
+          
+//         />
+//         <Menu.Menu position='right'>
+//           <Menu.Item>
+//             <Input icon='search' placeholder='Search...' />
+//           </Menu.Item>
          
-        </Menu.Menu>
-      </Menu>
+//         </Menu.Menu>
+//       </Menu>
       
-    )
-  }
-}
+//     )
+//   }
+// }
