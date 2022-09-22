@@ -5,12 +5,12 @@ import axios from 'axios'
 import { useForm} from 'react-hook-form'
 import  {setFromDtttm} from "react-datepicker";
 
-import { Input, Menu } from 'semantic-ui-react'
+// import { Input, Menu } from 'semantic-ui-react'
 // import React, { Component } from 'react'
 
 
 
-function FormExampleWidthField(){
+function Cargo(){
     // const {buttonText} =this.state.false 
     
     // const {handleSubmit, register} =useForm()
@@ -30,7 +30,7 @@ function FormExampleWidthField(){
     return(
         
         <>
-            <Menu secondary>
+            {/* <Menu secondary>
                 <Menu.Item
                     name='New Record'
                 
@@ -51,7 +51,7 @@ function FormExampleWidthField(){
                     </Menu.Item>
                 
                 </Menu.Menu>
-            </Menu>
+            </Menu> */}
         
         
             <Form className="wrapper" onSubmit={handleSubmit(onSubmit)} action="/stats"  method="post" >
@@ -267,4 +267,4 @@ function FormExampleWidthField(){
   
 
 
-export default FormExampleWidthField;
+export default Cargo

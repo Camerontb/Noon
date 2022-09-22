@@ -1,14 +1,20 @@
-import React from "react";
-import Header  from './Header';
-import { Component } from "react";
-import { Grid } from "semantic-ui-react";
-import './App.css';
-// import react
-
-import FormExampleWidthField from "./FormExampleWidthField";
-import MenuExampleSecondary from "./Menu"
-import Footer from "./Footer";
+import {StrictMode} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+
+import { Component } from "react";
+
+
+
+
+import App from "./App"
+import {Outlet, Navlink} from "react-router-dom"
+
+import Cargo from "./Cargo";
+import Home from "./Home";
+import FAOP from "./FAOP";
+import { Grid } from "semantic-ui-react";
+
 
 
 class Main extends Component{
@@ -16,21 +22,13 @@ class Main extends Component{
         return(
             <BrowserRouter>
                 <Routes>
-                {/* <Footer /> */}
+                
+                    <Route path ='/' element= {<App/>}/>
+                        <Route path ='/home' element={<Home />} />
 
-                
-                {/* <Header/> */}
-                {/* <MenuExampleSecondary /> */}
-
-                {/* <div className="wrapper" class="ui action input"><input type="text" placeholder="Vessel name..."/><button class="ui button">Search</button></div> */}
-                
-                
-                    
-                    {/* <GridExampleColumnWidth/> */}
-                    {/* <Form/> */}
-                    <Route path ='/Menu' element= {<MenuExampleSecondary/>}/>
-                   
-                    <Route path ='/' element= {<FormExampleWidthField/>}/>
+                        {/* <Route path='/Home' element={<Home />} /> */}
+                        <Route path ='/Cargo' element={<Cargo />} />
+                        <Route path ='/FAOP' element={<FAOP />} />                 
 
                 </Routes>   
             </BrowserRouter>   

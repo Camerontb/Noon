@@ -1,0 +1,112 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  body {
+    background-color: darkcyan;
+  }
+  
+  .header {
+    background-color: rgba(184, 201, 171, 0.507);
+    padding: 20px;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+  }
+  
+  .ulStyle {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+  }
+  
+  li button {
+    margin-left: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background-color: #a0bcc2;
+    padding: 5px;
+    border-style: none;
+  }
+  
+  .link-light:hover {
+    background-color: #e8f9fd;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  
+  .loginbtn:hover {
+    cursor: pointer;
+  }
+  
+  .signUpbtn:hover {
+    cursor: pointer;
+  }
+  
+  /*iput button css*/
+  
+  .inputBtn {
+    padding: 8px 2% 8px 2%;
+    margin: auto;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: darkcyan;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 205px;
+  }
+  
+  .passWordInput {
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+  }
+  
+  .userNameInput {
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .forgotInfo {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: #243a73;
+  }
+  
+  .newMenber {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.4rem;
+    background-color: darkcyan;
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+  /*sign information*/
+  
+  label.signForm {
+    color: #fff;
+    margin: 20px;
+  }
+  input.signForm {
+    margin-bottom: 15px;
+  }
+  input.inForm {
+    padding: 10px 50px 10px 50px;
+    border-radius: 5px;
+  }
+  .signUpInfo {
+    background-color: cadetblue;
+  }
+  
+  .goldcoin:hover {
+    background-color: #fff;
+  }
+  
