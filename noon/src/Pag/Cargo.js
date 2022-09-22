@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form } from 'semantic-ui-react'
-import './App.css';
+// import './App.css';
 import axios from 'axios'
 import { useForm} from 'react-hook-form'
 import  {setFromDtttm} from "react-datepicker";

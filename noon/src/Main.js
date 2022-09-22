@@ -6,13 +6,13 @@ import { Component } from "react";
 
 
 
-
-import App from "./App"
 import {Outlet, Navlink} from "react-router-dom"
 
-import Cargo from "./Cargo";
-import Home from "./Home";
-import FAOP from "./FAOP";
+import App from "./App"
+import Home from "./Pag/Home";
+
+import Cargo from "./Pag/Cargo";
+import FAOP from "./Pag/FAOP";
 import { Grid } from "semantic-ui-react";
 
 
@@ -20,18 +20,23 @@ import { Grid } from "semantic-ui-react";
 class Main extends Component{
     render(){
         return(
-            <BrowserRouter>
-                <Routes>
-                
-                    <Route path ='/' element= {<App/>}/>
-                        <Route path ='/home' element={<Home />} />
+            <StrictMode>
+                <BrowserRouter>
+                    <Routes>
+                    
+                        <Route path="/" element={<App />}>
+                            <Route index element={<Home />} />
 
-                        {/* <Route path='/Home' element={<Home />} /> */}
-                        <Route path ='/Cargo' element={<Cargo />} />
-                        <Route path ='/FAOP' element={<FAOP />} />                 
+                            
+                            <Route path ='/Cargo' element={<Cargo />} />
+                            <Route path ='/FAOP' element={<FAOP />} />                 
+                        </Route>
+                    </Routes>   
+                </BrowserRouter> 
 
-                </Routes>   
-            </BrowserRouter>   
+
+            </StrictMode>
+              
         )   
         
     }

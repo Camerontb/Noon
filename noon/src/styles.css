@@ -110,3 +110,11 @@
     background-color: #fff;
   }
   
+  .wrapper {
+    padding: 5px 20px;
+    border-top: 30px;
+}
+
+.wrapper fieldset {
+    margin: 20px 0;
+}

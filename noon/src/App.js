@@ -128,7 +128,8 @@ export default function App(){
         </li>
       </ul>
     </nav>
-    <Outlet />
+    <Outlet/>
+    
       
   </div>
 );
