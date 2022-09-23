@@ -62,8 +62,13 @@ app.get('/test',(req,res)=>{
         
         res.send("file uploaded")
     })
+
 app.listen(4000,()=>{
     console.log("Running on Port 4000")
 })
 
+app.post('/Pos', (req,res)=>{
+  console.log(req.body)
+  res.send("File Uploaded")
+})
 // Issue that unless a date is in all the fields it doesxnt register 

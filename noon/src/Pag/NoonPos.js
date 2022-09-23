@@ -8,7 +8,7 @@ import  {setFromDtttm} from "react-datepicker";
 
 
 
-function Cargo(){
+function NoonPos(){
     // const {buttonText} =this.state.false 
     
     // const {handleSubmit, register} =useForm()
@@ -17,7 +17,7 @@ function Cargo(){
     const onSubmit =(data) => {
         console.log(data)
         // alert(`You've lodged an expanse`)
-        axios.post('http://localhost:4000/noon',{
+        axios.post('http://localhost:4000/Pos',{
           data         
     
         })
@@ -51,8 +51,7 @@ function Cargo(){
                 </Menu.Menu>
             </Menu> */}
         
-        
-            <Form className="wrapper" onSubmit={handleSubmit(onSubmit)} action="/stats"  method="post" >
+        <Form className="wrapper" onSubmit={handleSubmit(onSubmit)} action="/stats"  method="post" >
                 
             
                 <Form.Group id= "details" onSubmit={handleSubmit} >
@@ -110,127 +109,63 @@ function Cargo(){
                 <table class="ui celled table">
                     <thead>
                         <tr>
-                        <th>Event</th>
-                        <th>Time</th>
-                        <th>Date</th>
+                        <th>Postion</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Notice or Readiness</td>
+                            <td>Postion</td>
                             <td>
                                 <input 
-                                type = "time"
-                                {...register('norTime')}
+                                type = "text"
+                                placeholder='Latitude 00-000.0'
+                                {...register('Latitude')}
                                 />
                             </td>
+                            
                             <td>
                                 <input 
-                                type = "date"
-                                placeholder='hello'
+                                type = "Text"
+                                placeholder='Longitude 00-000.0'
                                 {...register('norDate')}
                                 
                                 />
                             </td>
                         </tr>
-                        <tr>
-                            <td>On Port Passage</td>
-                            <td>
-                                <input 
-                                type = "time"
-                                {...register ('OnPortPassageTime')}
-                                />
-                            </td>
-                            <td>
-                                <input 
-                                type = "date"
-                                placeholder='hello'
-                                {...register('OnPortPassageDate')} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ramp Down</td>
-                            <td>
-                                <input 
-                                type = "time"
-                                {...register('RampDownTime')}
-                                />
-                            </td>
-                            <td>
-                                <input 
-                                type = "date"
-                                placeholder='hello'
-                                {...register('RampDownDate')} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Start Cargo</td>
-                            <td>
-                                <input 
-                                type = "time"
-                                {...register("StartCargoTime")}
-                                />
-                            </td>
-                            <td>
-                                <input 
-                                type = "date"
-                                placeholder='hello'
-                                {...register('StartCargoDate')} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Complete Cargo</td>
-                            <td>
-                                <input 
-                                type = "time"
-                                {...register('CompleteCargoTime')} 
-                                />
-                            </td>
-                            <td>
-                                <input 
-                                type = "date"
-                                placeholder='hello'
-                                {...register('CompleteCargoDate')} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ramp up</td>
-                            <td>
-                                <input 
-                                type = "time"
-                                {...register('RampUpTime')}
-                                />
-                            </td>
-                            <td>
-                                <input 
-                                type = "date"
-                                placeholder='hello'
-                                {...register('RampUpDate')} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>'FAOP (Full away on passage)'</td>
-                            <td>
-                                <input 
-                                type = "time"
-                                {...register('FAOPTime')}
-                                />
-                            </td>
-                            <td>
-                                <input 
-                                type = "date"
-                                placeholder='hello'
-                                {...register('FAOPDate')} 
-                                />
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
+                <table class="ui celled table">
+                    <thead>
+                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Speed</td>
+                            <td>
+                                <input 
+                                type = "text"
+                                placeholder='Daily Average Speed (Knots)'
+                                {...register('AvgSpeed')}
+                                />
+                            </td>
+                            <td>Distance Run</td>
+                            <td>
+                                <input 
+                                type = "text"
+                                placeholder='Distance Run Since Last Report'
+                                {...register('AvgSpeed')}
+                                />
+                            </td>
+                            
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
                 <div class="field">
                     <label>Notes and Comments</label>
                     <textarea {...register ('notes')}></textarea>
@@ -249,10 +184,11 @@ function Cargo(){
                 
             
             </Form>
+            
         </>      
     )
 
     
 }
 
-export default Cargo
+export default NoonPos

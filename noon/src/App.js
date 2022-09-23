@@ -10,7 +10,7 @@ import { Outlet, NavLink } from "react-router-dom";
 export default function App(){
   return(
     <div className="App">
-    <nav style={{ backgroundColor: "#F2F2F2", padding: "15px" }}>
+    <nav style={{ backgroundColor: "#1B1A17", padding: "15px" }}>
       <ul className="ulStyle">
         <li>
           {""}
@@ -52,7 +52,7 @@ export default function App(){
         <li>
           {" "}
           <NavLink
-            to="/FAOP"
+            to="/noonPos"
             className="link-light"
             style={({ isActive }) =>
               isActive
@@ -68,52 +68,16 @@ export default function App(){
                   }
             }
           >
-            FAOP
+            Noon Postion 
           </NavLink>{" "}
         </li>
         <li>
           {" "}
-          <NavLink
-            to="/Contact"
-            className="link-light"
-            style={({ isActive }) =>
-              isActive
-                ? {
-                    color: "#A0BCC2",
-                    background: "#E8F9FD",
-                    textDecoration: "none"
-                  }
-                : {
-                    color: "#A0BCC2",
-                    padding: "10px",
-                    textDecoration: "none"
-                  }
-            }
-          >
-            Contact
-          </NavLink>{" "}
+         
         </li>
         <li>
           {" "}
-          <NavLink
-            to="/Help"
-            className="link-light"
-            style={({ isActive }) =>
-              isActive
-                ? {
-                    color: "#A0BCC2",
-                    background: "#E8F9FD",
-                    textDecoration: "none"
-                  }
-                : {
-                    color: "#A0BCC2",
-                    padding: "10px",
-                    textDecoration: "none"
-                  }
-            }
-          >
-            Help
-          </NavLink>{" "}
+          
         </li>
         <li style={{ marginLeft: "60px" }}>
           <NavLink to="Login">

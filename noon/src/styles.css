@@ -7,7 +7,7 @@
   }
   
   .header {
-    background-color: rgba(184, 201, 171, 0.507);
+    background-color: rgba(201, 182, 171, 0.507);
     padding: 20px;
     font-family: "Times New Roman", Times, serif;
     text-decoration: none;
@@ -28,13 +28,13 @@
     font-size: 1.2rem;
     letter-spacing: 1px;
     color: #ffffff;
-    background-color: #a0bcc2;
+    background-color: #011707;
     padding: 5px;
     border-style: none;
   }
   
   .link-light:hover {
-    background-color: #e8f9fd;
+    background-color: #2d2c29;
     cursor: pointer;
     color: #ffffff;
   }

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div>
-      <h1>Hello</h1>
+      <h1>Under Construction</h1>
     </div>
   );
 }
