@@ -129,7 +129,7 @@ function NoonPos(){
                                 <input 
                                 type = "Text"
                                 placeholder='Longitude 00-000.0'
-                                {...register('norDate')}
+                                {...register('Longitude')}
                                 
                                 />
                             </td>
@@ -156,7 +156,7 @@ function NoonPos(){
                                 <input 
                                 type = "text"
                                 placeholder='Distance Run Since Last Report'
-                                {...register('AvgSpeed')}
+                                {...register('DistanceRun')}
                                 />
                             </td>
                             

@@ -27,11 +27,13 @@ class Main extends Component{
                         <Route path="/" element={<App />}>
                             <Route index element={<Home />} />  
                             <Route path ='/Cargo' element={<Cargo />} />
-                            <Route path ='/NoonPos' element={<NoonPos />} />                 
+                            <Route path ='/NoonPos' element={<NoonPos />} />        
+
                         </Route>
+                        
                     </Routes>   
                 </BrowserRouter> 
-
+                
 
             </StrictMode>
               

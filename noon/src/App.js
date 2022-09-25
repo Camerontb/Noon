@@ -92,10 +92,16 @@ export default function App(){
         </li>
       </ul>
     </nav>
+    
+  <div className="footer">
+    <p>caMarine</p>
+  </div>
+);
     <Outlet/>
     
       
   </div>
+  
 );
 }
     

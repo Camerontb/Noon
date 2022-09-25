@@ -61,14 +61,42 @@ app.get('/test',(req,res)=>{
         })
         
         res.send("file uploaded")
+})
+
+// app.listen(4000,()=>{
+//     console.log("Runnsing on Port 4000")
+// })
+
+app.post('/Pos', (req,res)=>{
+  console.log(req.body)
+  res.send("File Uploaded m")
+  const VesselName =req.body.data.VesselName
+  const Port= req.body.data.Port
+  const opDate= req.body.data.opDate
+  const Latitude =req.body.data.Latitude
+  const Longitude =req.body.data.Longitude
+
+  const AvgSpeed= req.body.data.AvgSpeed
+  const DistanceRun= req.body.data.DistanceRun
+  const Note= req.body.data.Note
+  // console.log(Note,opDate)
+
+    // const ADD_QUERY =  `INSERT INTO Pos (VesselName,Port,opDate,Latitude,Longitude,AvgSpeed,DistanceRun,notes) VALUES ('${VesselName}','${Port}','${opDate}','${Latitude}','${Longitude}','${AvgSpeed}','${DistanceRun}','${notes}')`;
+    const ADD_QUERY =  `INSERT INTO Pos (VesselName) VALUES ('${VesselName}')`
+    const recieve = `SELECT * from Pos`;
+    connection.query(ADD_QUERY,(err,res)=>{
     })
+    connection.query(recieve,(err,rows)=>{
+      if(err)console.log(err)
+      console.log(rows)
+      
+    })
+    
+    res.send("file uploaded")
+})   
+
+
 
 app.listen(4000,()=>{
     console.log("Running on Port 4000")
 })
-
-app.post('/Pos', (req,res)=>{
-  console.log(req.body)
-  res.send("File Uploaded")
-})
-// Issue that unless a date is in all the fields it doesxnt register 
