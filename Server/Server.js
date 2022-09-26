@@ -78,11 +78,11 @@ app.post('/Pos', (req,res)=>{
 
   const AvgSpeed= req.body.data.AvgSpeed
   const DistanceRun= req.body.data.DistanceRun
-  const Note= req.body.data.Note
+  const notes= req.body.data.notes
   // console.log(Note,opDate)
 
     // const ADD_QUERY =  `INSERT INTO Pos (VesselName,Port,opDate,Latitude,Longitude,AvgSpeed,DistanceRun,notes) VALUES ('${VesselName}','${Port}','${opDate}','${Latitude}','${Longitude}','${AvgSpeed}','${DistanceRun}','${notes}')`;
-    const ADD_QUERY =  `INSERT INTO Pos (VesselName) VALUES ('${VesselName}')`
+    const ADD_QUERY =  `INSERT INTO Pos (VesselName, Port, opDate, Latitude, Longitude, AvgSpeed,DistanceRun,notes) VALUES ('${VesselName}','${Port}','${opDate}', '${Latitude}','${Longitude}','${AvgSpeed}','${DistanceRun}','${notes}')`
     const recieve = `SELECT * from Pos`;
     connection.query(ADD_QUERY,(err,res)=>{
     })
