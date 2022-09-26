@@ -96,7 +96,7 @@ export default function App(){
   <div className="footer">
     <p>caMarine</p>
   </div>
-);
+
     <Outlet/>
     
       
