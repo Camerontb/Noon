@@ -1,6 +1,6 @@
 import React from 'react'
 import "./styles.css";
-
+import axios from 'axios';
 import { Outlet, NavLink } from "react-router-dom";
 
 
@@ -8,6 +8,14 @@ import { Outlet, NavLink } from "react-router-dom";
 
 
 export default function App(){
+ 
+
+ 
+
+  // Passing configuration object to axios
+ 
+  
+  
   return(
     <div className="App">
     <nav style={{ backgroundColor: "#1B1A17", padding: "15px" }}>
