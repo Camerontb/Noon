@@ -73,3 +73,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 // Tips to run this app. 
 
 The local server has been formatted in such  a way that data is inputted in VARCHAR on the SQL end. 
+
+
+API endpoints is used with Weatherstack and you will need a username and password to make this work . 
+
+WEATERMAP 
+use
+https://api.openweathermap.org/data/2.5/weather?lat=-16.9&lon=145.7&appid=4c078ef44a149beb7efc39be6f61f99a&units=metric
