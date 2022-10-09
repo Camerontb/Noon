@@ -72,12 +72,16 @@
 import React from "react";
 import ReactWeather from "react-open-weather-widget";
 import "react-open-weather-widget/lib/css/ReactWeather.css";
-// import "../Style/styles.css
+import styles from "../Style/weatherStyle";
+import "../Style/styles.css"
+
+
 
 
 export default function Home() {
   return (
-    <div className="Home">
+    <div className="wrapper" style={styles.container}>
+      <h3>Weather</h3>
       
       <ReactWeather
         forecast="5days"
