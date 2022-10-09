@@ -2,6 +2,7 @@ import {StrictMode} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
+
 import { Component } from "react";
 
 
@@ -24,7 +25,7 @@ class Main extends Component{
                 <BrowserRouter>
                     <Routes>
                     
-                        <Route path="/" element={<App />}>
+                        <Route path="/" element={<App />} >
                             <Route index element={<Home/>} />  
                             <Route path ='/Cargo' element={<Cargo />} />
                             <Route path ='/NoonPos' element={<NoonPos />} />        

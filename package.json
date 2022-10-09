@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/olliebowe/Noon/issues"
   },
-  "homepage": "https://github.com/olliebowe/Noon#readme"
+  "homepage": "https://github.com/olliebowe/Noon#readme",
+  "dependencies": {
+    "react-open-weather-widget": "^1.1.0"
+  }
 }
