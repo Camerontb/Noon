@@ -80,3 +80,9 @@ API endpoints is used with Weatherstack and you will need a username and passwor
 WEATERMAP 
 use
 https://api.openweathermap.org/data/2.5/weather?lat=-16.9&lon=145.7&appid=4c078ef44a149beb7efc39be6f61f99a&units=metric
+
+
+
+Stormglass Tides API
+
+c8daa0e6-4884-11ed-bce5-0242ac130002-c8daa154-4884-11ed-bce5-0242ac130002
