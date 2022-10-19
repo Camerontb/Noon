@@ -11,7 +11,7 @@ import { Form } from "react-router-dom";
 import axios from 'axios'
 
 import { useForm} from 'react-hook-form'
-const moment = require ('moment')
+
 
 const Home = () => {
   const [apiData, setApiData] = useState({});
@@ -37,9 +37,12 @@ useEffect(() => {
   
   ,[])
   
+
+//Time Stamp COnversion 
+
+const moment = require ('moment')
 let sunR = apiData.sys?.sunset; console.log(sunR)
 let sunS = apiData.sys?.sunrise; console.log(sunS)
-
 let now= moment()
 console.log(now.format())
 var crtSunR = moment.unix(sunR);
@@ -47,7 +50,7 @@ var crtSunS = moment.unix(sunS);
 
 console.log( crtSunR.format("hh:mm:ss") );
 
-// // Date convert 
+//Tidal API 
 const [tideData, setTideData] = useState();
 
 var myHeaders = new Headers();
@@ -69,7 +72,7 @@ useEffect(() => {
     
   },[]);
   
-
+//Vessel FInder API 
   const axios = require("axios");
 
   const options = {
@@ -118,6 +121,24 @@ useEffect(() => {
               <th>{crtSunR.format("hh:mm")}</th>
              
             </tr>
+            
+
+          </Table>
+          <Table>
+              <thead>
+                  <tr>
+                    <th>Vessel </th>
+                    <th>Speed</th>
+                    <th>Next Port</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>{apiData?.wind?.speed}</td>
+                    <td>{apiData?.wind?.deg}</td>
+                    <td>{apiData?.main?.temp}</td>
+                  </tr>
+              </tbody>
             
 
           </Table>

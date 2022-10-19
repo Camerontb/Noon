@@ -7,11 +7,12 @@ import  {setFromDtttm} from "react-datepicker";
 
 
 
-
 function NoonPos(){
     // const {buttonText} =this.state.false 
     
     // const {handleSubmit, register} =useForm()
+    const checkList = ['Yes', 'No']
+
     const portOptions = ''
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit =(data) => {
@@ -164,6 +165,68 @@ function NoonPos(){
                         </tr>
                         
                     </tbody>
+                    <tbody>
+{/* No SQL Entries foer the register. */}
+                        <tr>
+                            <td>Next Port</td>
+                            <td>
+                                <input 
+                                type = "text"
+                                placeholder='Next Port'
+                                {...register('NextPort')}
+                                />
+                            </td>
+                            <td>Next Port ETA</td>
+                            <td>
+                                <input 
+                                    type = "text"
+                                    placeholder='ETA at next port'
+                                    {...register('NextPortETA')}
+                                    />   
+                            </td>
+                           
+                            
+                                
+                            
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <table class="ui celled table">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div className="checkList">
+                                <div className="title">ETA on time</div>
+                                    <div >
+                                    {checkList.map((item, index) => (
+                                        <div className='list-container'
+                                            key={index} >
+                                            <input value= {item} type= 'checkbox'/>
+                                            <span> {item}</span>
+                                            
+                                                
+
+                                            
+
+                                            
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </td>
+                        <td>Time Delayed if any</td>
+                        <td>
+                            <input placeholder='DD HH MM' type= 'text'
+                            {...register('DelayTime')}/>
+                        </td>
+                        
+                    </tr>
+                    
+                        
+                    </tbody>
+                    
                 </table>
                 
                 <div class="field">
