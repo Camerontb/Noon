@@ -86,3 +86,7 @@ https://api.openweathermap.org/data/2.5/weather?lat=-16.9&lon=145.7&appid=4c078e
 Stormglass Tides API
 
 c8daa0e6-4884-11ed-bce5-0242ac130002-c8daa154-4884-11ed-bce5-0242ac130002
+
+marine traffic API 
+
+944095227977fdbfe57a303ea39a27e11eb5e70d 

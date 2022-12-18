@@ -46,6 +46,7 @@ app.get('/test',(req,res)=>{
     const FAOPTime= req.body.data.FAOPTime
     const FAOPDate= req.body.data.FAOPDate
     const notes= req.body.data.notes
+   
 
 
 
@@ -78,11 +79,14 @@ app.post('/Pos', (req,res)=>{
 
   const AvgSpeed= req.body.data.AvgSpeed
   const DistanceRun= req.body.data.DistanceRun
+  // const OnTime= req.body.data.OnTime
+  const DelayTime= req.body.data.DelayTime
   const notes= req.body.data.notes
+  const NextPortETA= req.body.data.NextPortETA
   // console.log(Note,opDate)
 
     // const ADD_QUERY =  `INSERT INTO Pos (VesselName,Port,opDate,Latitude,Longitude,AvgSpeed,DistanceRun,notes) VALUES ('${VesselName}','${Port}','${opDate}','${Latitude}','${Longitude}','${AvgSpeed}','${DistanceRun}','${notes}')`;
-    const ADD_QUERY =  `INSERT INTO Pos (VesselName, Port, opDate, Latitude, Longitude, AvgSpeed,DistanceRun,notes) VALUES ('${VesselName}','${Port}','${opDate}', '${Latitude}','${Longitude}','${AvgSpeed}','${DistanceRun}','${notes}')`
+    const ADD_QUERY =  `INSERT INTO Pos (VesselName, Port, opDate, Latitude, Longitude, AvgSpeed,DistanceRun,DelayTime,notes,NextPortETA) VALUES ('${VesselName}','${Port}','${opDate}', '${Latitude}','${Longitude}','${AvgSpeed}','${DistanceRun}','${DelayTime}','${notes}','${NextPortETA}')`
     const recieve = `SELECT * from Pos`;
     connection.query(ADD_QUERY,(err,res)=>{
     })

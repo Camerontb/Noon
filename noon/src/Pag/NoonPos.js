@@ -156,7 +156,7 @@ function NoonPos(){
                             <td>
                                 <input 
                                 type = "text"
-                                placeholder='Distance Run Since Last Report'
+                                placeholder='Distance Run Since Last Report - Nautical Miles'
                                 {...register('DistanceRun')}
                                 />
                             </td>
@@ -179,7 +179,7 @@ function NoonPos(){
                             <td>Next Port ETA</td>
                             <td>
                                 <input 
-                                    type = "text"
+                                    type = "time"
                                     placeholder='ETA at next port'
                                     {...register('NextPortETA')}
                                     />   
@@ -203,7 +203,10 @@ function NoonPos(){
                                     {checkList.map((item, index) => (
                                         <div className='list-container'
                                             key={index} >
-                                            <input value= {item} type= 'checkbox'/>
+                                            <input value= {item} 
+                                            type= 'checkbox' {...register('checkbox')}
+                                            
+                                            />
                                             <span> {item}</span>
                                             
                                                 
@@ -218,8 +221,12 @@ function NoonPos(){
                         </td>
                         <td>Time Delayed if any</td>
                         <td>
-                            <input placeholder='DD HH MM' type= 'text'
-                            {...register('DelayTime')}/>
+                            <div class = 'ui calendar'>
+                                <input placeholder='DD HH MM' type= 'time'
+                                {...register('DelayTime')}/>
+
+                            </div>
+                            
                         </td>
                         
                     </tr>

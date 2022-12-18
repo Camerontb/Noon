@@ -51,45 +51,67 @@ var crtSunS = moment.unix(sunS);
 console.log( crtSunR.format("hh:mm:ss") );
 
 //Tidal API 
-const [tideData, setTideData] = useState();
+// const [tideData, setTideData] = useState();
 
-var myHeaders = new Headers();
-myHeaders.append("Authorization", "c8daa0e6-4884-11ed-bce5-0242ac130002-c8daa154-4884-11ed-bce5-0242ac130002");
+// var myHeaders = new Headers();
+// myHeaders.append("Authorization", "c8daa0e6-4884-11ed-bce5-0242ac130002-c8daa154-4884-11ed-bce5-0242ac130002");
 
-var requestOptions = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
-useEffect(() => {
+// var requestOptions = {
+//   method: 'GET',
+//   headers: myHeaders,
+//   redirect: 'follow'
+// };
+// useEffect(() => {
 
-  fetch("https://api.stormglass.io/v2/tide/extremes/point?lat=60.936&lng=5.114&start=2022-10-10T10:44:05Z&end=2022-10-10T13:44:05Z",requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .then((data) => {setTideData(data);console.log(data)});
+//   fetch("https://api.stormglass.io/v2/tide/extremes/point?lat=60.936&lng=5.114&start=2022-10-10T10:44:05Z&end=2022-10-10T13:44:05Z",requestOptions)
+//     .then(response => response.text())
+//     .then(result => console.log(result))
+   
 
-    // .catch(error => console.log('error', error));
+//     // .catch(error => console.log('error', error));
     
-  },[]);
+//   },[]);
   
 //Vessel FInder API 
-  const axios = require("axios");
+  // const axios = require("axios");
 
-  const options = {
-    method: 'GET',
-    url: 'https://vesselin.p.rapidapi.com/ais',
-    params: {mmsi: '211873030', dist: '1'},
-    headers: {
-      'X-RapidAPI-Key': 'd74726e5fcmsh5e054eeee7dd9b2p125e85jsnae8a7bf3b456',
-      'X-RapidAPI-Host': 'vesselin.p.rapidapi.com'
-    }
-  };
+  // const options = {
+  //   method: 'GET',
+  //   url: 'https://vesselin.p.rapidapi.com/ais',
+  //   params: {mmsi: '503609000', dist: '1'},
+  //   headers: {
+  //     'X-RapidAPI-Key': 'd74726e5fcmsh5e054eeee7dd9b2p125e85jsnae8a7bf3b456',
+  //     'X-RapidAPI-Host': 'vesselin.p.rapidapi.com'
+  //   }
+  // };
 
-  axios.request(options).then(function (response) {
-    console.log(response.data);
-  }).catch(function (error) {
-    console.error(error);
-  });
+  // axios.request(options).then(function (response) {
+  //   console.log(response.data);
+  // }).catch(function (error) {
+  //   console.error(error);
+  // });
+
+
+//Marine Traffic 
+
+
+
+  const [VesData, setVesData] = useState();
+    
+useEffect(() => {
+
+  fetch('https://services.marinetraffic.com/api/exportvessels/944095227977fdbfe57a303ea39a27e11eb5e70d/v:8/protocol:json/timespan:60')
+    .then((res) => res.json())
+    
+    .then((data) => {setVesData(data) ; console.log({VesData})});
+  
+
+    // .catch(error => console.log('error', error));
+    const name = VesData
+    console.log(name)
+  },[]);
+ 
+
 // export default function Home() {
   return (
     <div>
@@ -128,8 +150,10 @@ useEffect(() => {
               <thead>
                   <tr>
                     <th>Vessel </th>
-                    <th>Speed</th>
+                   
                     <th>Next Port</th>
+                    <th>ETA</th>
+
                   </tr>
               </thead>
               <tbody>
